@@ -1,0 +1,458 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "DM Sans", serif;
+  background: url('../assets/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+button {
+  font-weight: bold;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+h1, h2 {
+  font-family: 'Georgia, serif';
+}
+
+.mt-4 {
+  margin-top: 16px;
+}
+
+.mt-2 {
+  margin-top: 8px;
+}
+
+.mb-4 {
+  margin-bottom: 16px;
+}
+
+.mb-6 {
+  margin-bottom: 24px;
+}
+
+.px-4 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.py-2 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.rounded {
+  border-radius: 8px;
+}
+
+.bg-gray-100 {
+  background-color: #f7fafc;
+}
+
+.bg-gray-50 {
+  background-color: #f9fafb;
+}
+
+.text-gray-700 {
+  color: #4a5568;
+}
+
+.text-gray-800 {
+  color: #2d3748;
+}
+
+/* Button and Link Hover Effects */
+button:hover, a:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Increased shadow for products */
+.shadow-lg {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Gradient Borders for Products */
+.border-gradient1 {
+  border-image-source: linear-gradient(45deg, #ff00ff, #0000ff);
+  border-image-slice: 1;
+}
+
+.border-gradient2 {
+  border-image-source: linear-gradient(45deg, #ff9900, #33cc33);
+  border-image-slice: 1;
+}
+
+/* Gradient Button */
+.gradient-button {
+  background: linear-gradient(45deg, #ff00ff, #00f0ff);
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.gradient-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #00f0ff, #ff00ff);
+}
+
+/* New Gradient Button for "Go to Cart" */
+.gradient-button-cart {
+  background: linear-gradient(45deg, #00ff00, #00ffff);
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.gradient-button-cart:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #00ffff, #00ff00);
+}
+
+/* Gradient Button for "Back Home" */
+.gradient-button-back-home {
+  background: linear-gradient(45deg, #ff0000, #ff7e5f); /* Gradient red color */
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.gradient-button-back-home:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #ff7e5f, #ff0000); /* Gradient red color on hover */
+}
+
+/* Ensure cards are aligned correctly */
+.grid-cols-1 {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Shining Text Effect */
+.shine-text {
+  animation: shine 5s linear infinite;
+  background: linear-gradient(45deg, #FF6B6B, #FFD93D, #6BCB77, #4D96FF, #9C1DE7);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes shine {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+/* Add this class to your CSS file */
+.bg-yellow {
+  background-color: yellow;
+  color: black; /* Ensure the text is readable against the yellow background */
+}
+
+.green-mark {
+  width: 10px; /* Adjust size as needed */
+  height: 10px; /* Adjust size as needed */
+  background-color: #16a34a; /* Green color */
+  border-radius: 50%; /* Make it a circle */
+  display: inline-block; /* Ensure it doesn't break the line */
+  margin-left: 5px; /* Space between text and green mark */
+  vertical-align: middle; /* Align it with the text */
+}
+
+/* Specific styles for product name and green circle */
+.absolute {
+  position: absolute;
+}
+
+.bottom-1 {
+  bottom: 0.25rem;
+}
+
+.right-2 {
+  right: 0.5rem;
+}
+
+.border-red-600 {
+  border-color: #e3342f;
+  border-width: 1px;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.rounded-tr-lg {
+  border-top-right-radius: 0.5rem;
+}
+
+.rounded-bl-lg {
+  border-bottom-left-radius: 0.5rem;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
+.w-2.5 {
+  width: 0.625rem;
+}
+
+.h-2.5 {
+  height: 0.625rem;
+}
+
+.bg-green-600 {
+  background-color: #16a34a;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+/* Text Gradient Effect */
+.text-gradient {
+  background: linear-gradient(45deg, #ff6b6b, #ffd93d, #6bcb77, #4d96ff, #9c1de7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Background Gradient */
+.bg-gradient-to-b {
+  background: linear-gradient(to bottom, #fff7e0, #ffe5e0, #fff2e0);
+}
+
+/* Background Image */
+.bg-checkout {
+  background: url('https://images.unsplash.com/photo-1664959784227-aa7178f85b20?q=80&w=2029&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Hover effects with borders and background color changes */
+.hover-border:hover {
+  border-color: #FFD700; /* Gold border on hover */
+  background-color: rgba(255, 215, 0, 0.3); /* Light gold background on hover */
+  box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3); /* Gold shadow on hover */
+  transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* New Premium Styles */
+.premium-container {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.premium-title {
+  font-family: 'Georgia, serif';
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.premium-subtitle {
+  font-family: 'Arial, sans-serif';
+  font-size: 1.25rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.premium-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.premium-item img {
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+.premium-item-details {
+  flex: 1;
+}
+
+.premium-item-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.premium-item-price {
+  font-size: 1rem;
+  color: #666;
+}
+
+.premium-total {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+}
+
+.premium-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #ff6b6b, #ff8c00);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.premium-button:hover {
+  background: linear-gradient(45deg, #ff8c00, #ff6b6b);
+  transform: scale(1.05);
+}
+
+/* Gradient Fill Color Effect for order placed text */
+.text-gradient-fill {
+  background: linear-gradient(45deg, #0000ff, #ff8c00, #0000ff); /* Blue and orange gradient */
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-fill-loop 3s linear infinite;
+}
+
+@keyframes gradient-fill-loop {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+@keyframes gradientAnimation {
+  0% { color: #8A2387; }
+  25% { color: #E94057; }
+  50% { color: #F27121; }
+  75% { color: #8A2387; }
+  100% { color: #E94057; }
+}
+
+.gradient-text {
+  animation: gradientAnimation 3s infinite;
+}
+
+/* Ensure video takes up full width and height but scales properly on smaller screens */
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensures the video scales properly on different screen sizes */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 24px;
+  }
+
+  .subheading {
+    font-size: 24px; /* Increased for better visibility on mobile */
+  }
+
+  .content p {
+    font-size: 18px;
+  }
+
+  .cta {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  /* Adjust the video container for smaller screens */
+  video {
+    object-position: center center;
+  }
+
+  /* Adjust "Contact Us" text size */
+  .footer-text {
+    font-size: 14px; /* Smaller size for mobile */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .heading {
+    font-size: 20px;
+  }
+
+  .subheading {
+    font-size: 22px; /* Slightly increased size */
+  }
+
+  .content p {
+    font-size: 16px;
+  }
+
+  .cta {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  /* Ensure the video doesn't overflow and stays centered */
+  video {
+    object-position: top center; /* Adjust to show more content in smaller screens */
+  }
+
+  /* Adjust "Contact Us" text size */
+  .footer-text {
+    font-size: 12px; /* Even smaller for very small screens */
+  }
+}
